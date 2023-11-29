@@ -51,7 +51,7 @@ describe("Integration test for product list use case", () => {
             ]
         }
                        
-        var result = await useCase.execute();
+        var result = await useCase.execute({});
        
         expect(result).toEqual({products: expect.arrayContaining(output.products)});
     });

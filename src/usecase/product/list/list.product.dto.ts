@@ -1,4 +1,4 @@
-export interface InputListCustomerDto {}
+export interface InputListProductDto {}
 
 export type Product = {
     id: string;

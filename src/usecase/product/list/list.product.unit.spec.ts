@@ -1,3 +1,4 @@
+import { InputListProductDto } from './list.product.dto';
 import CustomerFactory from "../../../domain/customer/factory/customer.factory";
 import Address from "../../../domain/customer/value-object/address";
 import ProductFactory from "../../../domain/product/factory/product.factory";
@@ -30,7 +31,7 @@ describe("Unit test for listing product use case", () => {
         const repository = MockRepository();
         const useCase = new ListProductsUseCase(repository);
 
-        const output = await useCase.execute();
+        const output = await useCase.execute({});
 
         expect(output.products.length).toBe(2);
         expect(output.products[0].id).toBe(product1.id);
