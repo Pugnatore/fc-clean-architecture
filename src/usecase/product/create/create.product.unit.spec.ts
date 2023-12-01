@@ -36,7 +36,7 @@ const MockRepository = () => {
         input.price = 0;
     
         await expect(productCreateUseCase.execute(input)).rejects.toThrow(
-          "Price must be greater than zero"
+          "product: Price must be greater than zero"
         );
     });
 
@@ -47,7 +47,7 @@ const MockRepository = () => {
         input.name = "";
     
         await expect(productCreateUseCase.execute(input)).rejects.toThrow(
-          "Name is required"
+          "product: Name is required"
         );
     });
 
@@ -58,7 +58,7 @@ const MockRepository = () => {
         input.type = "";
     
         await expect(productCreateUseCase.execute(input)).rejects.toThrow(
-          "Product type not supported"
+          "product: Product type not supported"
         );
     });
 
@@ -69,7 +69,7 @@ const MockRepository = () => {
         input.type = "c";
     
         await expect(productCreateUseCase.execute(input)).rejects.toThrow(
-          "Product type not supported"
+          "product: Product type not supported"
         );
     });
   });
