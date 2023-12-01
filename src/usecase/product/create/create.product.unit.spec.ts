@@ -32,7 +32,7 @@ const MockRepository = () => {
     it("should thrown an error when price is missing", async () => {
         const productRepository = MockRepository();
         const productCreateUseCase = new CreateProductUseCase(productRepository);
-    
+        
         input.price = 0;
     
         await expect(productCreateUseCase.execute(input)).rejects.toThrow(
